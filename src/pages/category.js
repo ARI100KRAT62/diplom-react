@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom"
 
 export function Category() {
     const { id } = useParams()
-    const [items, setItems ] = useState([])
+    const [items, setItems] = useState([])
     useEffect(() => {
         RestService.getCategory(id).then(result => {
             setItems(result)
